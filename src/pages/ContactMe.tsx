@@ -1,0 +1,117 @@
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Section, SectionTitle } from './Profile';
+import {
+    fadeInUp,
+    fadeInRight,
+    fadeInLeft,
+    animationContainer
+} from "../animations/variants";
+import AvatorCelebrate from '../assets/avator-celebrate.png';
+import styled from '@emotion/styled';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
+
+export const ContactMe: React.FC = () => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView({
+        threshold: [0.25],
+        triggerOnce: true
+    });
+    useEffect(() => {
+        if (inView) {
+        controls.start("visible");
+        } else {
+        controls.start("hidden");
+        }
+    }, [controls, inView]);
+    return (
+        <Section
+            id="contactMe"
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={animationContainer}
+        >
+            <SectionTitle variants={fadeInRight}>Contact Me</SectionTitle>
+            <Content>
+                <Text variants={fadeInUp}>I'm looking for an fulltime software developer position. Please contact me if you have any positions available for me. Thank you in advance and I'm excited to have a chat with you soon!</Text>
+                <PlatformsWrapper>
+                    <Platforms>
+                        <Platform variants={fadeInUp}><LinkedInIcon /><PlatformName>LinkedIn</PlatformName><Link href='https://www.linkedin.com/in/jason199best/'>https://www.linkedin.com/in/jason199best/</Link></Platform>
+                        <Platform variants={fadeInUp}><GitHubIcon /><PlatformName>GitHub</PlatformName><Link href='https://github.com/Jasonchen-66/'>https://github.com/Jasonchen-66/</Link></Platform>
+                        <Platform variants={fadeInUp}><EmailIcon /><PlatformName>Email</PlatformName><Email>jianbang@ualberta.ca</Email></Platform>
+                        <Platform variants={fadeInUp}>< PermPhoneMsgIcon/><PlatformName>Phone</PlatformName>780-318-0666</Platform>
+                    </Platforms>
+                </PlatformsWrapper>
+                <AvatorImage src={AvatorCelebrate} alt='Celebrate avator' variants={fadeInLeft} />
+            </Content>
+        </Section>
+    );
+}
+
+const Content = styled.div`
+    position: relative;
+`;
+
+const Text = styled(motion.div)`
+    font-size: 15.5px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 22px;
+    text-align: center;
+    margin: 14.5px 36px;
+    margin-top: 36.5px;
+`;
+
+const Platform = styled(motion.div)`
+    font-size: 15.5px;
+    letter-spacing: 1.5px;
+    display: flex;
+    margin: 16px auto;
+    align-items: center;
+`;
+
+const PlatformName = styled.div`
+    font-weight: 500;
+    width: 87px;
+`;
+
+const Link = styled.a`
+    font-size: 14.5px;
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+    &:visited {
+        color: black;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+`;
+
+const PlatformsWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+const Email = styled.span`
+    font-size: 14.5px;
+`;
+
+const Platforms = styled.div`
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 87px;
+`;
+
+const AvatorImage = styled(motion.img)`
+    position:absolute;
+    bottom:0;
+    right:0;
+    width: 150px;
+`;
