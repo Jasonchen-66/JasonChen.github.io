@@ -28,7 +28,8 @@
     "sass": "^1.54.6",
     "simplex-noise": "^3.0.1",
     "swiper": "^8.3.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "react-scripts start",

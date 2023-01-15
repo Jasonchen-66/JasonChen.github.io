@@ -85,7 +85,7 @@ export const Profile: React.FC = () => {
     >
       <SectionTitle variants={fadeInRight}>Profile</SectionTitle>
         <Texts variants={fadeInRight}>
-          <Text>I am a software engineer, graduated from University of Alberta with Specialization in Computer Science. </Text><br/>
+          <Text>I am a new graduate software developer, graduated from University of Alberta with Specialization in Computer Science. </Text><br/>
           <Text>I am currently based in Edmonton, AB who's experienced in taking fullstack applications from scratch to production.</Text><br/>
           <Text>My inquiring mind never stops me from learning more about software engineering every single day. I am a fast learner and have great adaptability as I have grown up in different parts of the world throughout my life.</Text><br/>
         </Texts>

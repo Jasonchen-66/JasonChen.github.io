@@ -38,7 +38,7 @@ export const ContactMe: React.FC = () => {
         >
             <SectionTitle variants={fadeInRight}>Contact Me</SectionTitle>
             <Content>
-                <Text variants={fadeInUp}>I'm looking for an fulltime software developer position. Please contact me if you have any positions available for me. Thank you in advance and I'm excited to have a chat with you soon!</Text>
+                <Text variants={fadeInUp}>I'm looking for a entry level fulltime software developer position. Please contact me if you have any positions available for me. Thank you in advance and I'm excited to have a chat with you soon!</Text>
                 <PlatformsWrapper>
                     <Platforms>
                         <Platform variants={fadeInUp}><LinkedInIcon /><PlatformName>LinkedIn</PlatformName><Link href='https://www.linkedin.com/in/jason199best/'>https://www.linkedin.com/in/jason199best/</Link></Platform>

@@ -3,6 +3,7 @@ import SocialMediaImage from './assets/social-media-image.jpg';
 import HomeImage from './assets/home-image.png';
 import MooresIcon from './assets/moores-icon.png'
 import LEDProIcon from './assets/ledpros-logo-small.png'
+import OnlineShop from './assets/OnlineShopping.jpeg'
 //import ArsagaIcon from './assets/arsaga-icon.jpeg';
 
 export const myWorkData = [
@@ -29,12 +30,20 @@ export const myWorkData = [
         languages: ["JavaScript", "React"],
         backgroundImage: HomeImage,
         githubLink: "https://github.com/Jasonchen-66/MERN-App"
+    },
+    {
+        id: 4,
+        title: "ShopOnline Solution",
+        description: "A web app for online shopping.",
+        languages: ["C#", "Blazor"],
+        backgroundImage: OnlineShop,
+        githubLink: "https://github.com/Jasonchen-66/ShopOnlineSolution"
     }
 ];
 
-export const backendSkills = ['Python (+ Django)', 'Java (+ Android Studio)', 'C#', 'SQL', 'MongoDB'];
-export const frontendSkills = ['HTML', 'CSS', 'Javascript', 'React'];
-export const otherSkills = ['Figma', 'Postman', 'Git / GitHub', 'AWS s3', 'Visual Studio Code'];
+export const backendSkills = ['Python (+ Django)', 'Java (+ Android Studio)', 'C# (+ Visual Studio)', 'SQL', 'MongoDB'];
+export const frontendSkills = ['HTML', 'CSS', 'Javascript', 'React','Blazor'];
+export const otherSkills = ['Figma', 'Postman', 'Git / GitHub', 'AWS s3', 'Visual Studio Code','Azure','Docker'];
 
 export const MooresDetails = {
     companyIcon: {
